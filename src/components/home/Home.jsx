@@ -45,7 +45,7 @@ export default function Home() {
         const fetchDataSort1 = async (value) => {
             if (value !== "All") {
                 try {
-                    const response = await fetch(`https://dummyjson.com/products/category/${value}`)
+                    const response = await fetch(`https://dummyjson.com/products/category/${value}`);
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
                     }
