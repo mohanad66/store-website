@@ -1,0 +1,36 @@
+body{
+    background-image: linear-gradient(to left,yellow , rgb(175, 1, 175));
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+/* App.css */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of everything */
+    opacity: 1; /* Initially fully visible */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+  }
+  
+  .loading-overlay.fade-out {
+    opacity: 0; /* Fade out by reducing opacity to 0 */
+  }
+  
+  .loading-content {
+    text-align: center;
+    color: white;
+  }
+  
+  .loading-content p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
