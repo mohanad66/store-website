@@ -88,8 +88,8 @@ export default function Home() {
                 <div className="search">
                     <input type="text" onChange={(e) => { handleSearhing(e.target.value) }} placeholder='Search' />
                 </div>
-                <div className="sort">
-                    <select name="" id="" value={selectedItem} onChange={(e) => {
+                <div name="filter" className="sort">
+                    <select name="filter" value={selectedItem} onChange={(e) => {
                         handleSelect(e.target.value);
                         setSelectenItem(e.target.value);
                     }}>
