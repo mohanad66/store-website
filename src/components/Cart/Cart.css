@@ -1,0 +1,36 @@
+.cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.Checkout{
+    background: #fff;
+    color: #000;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-bottom: 20%;
+}
+.Checkout h3{
+    margin-left: 5%;
+    display: flex;
+    width: 100%;
+    margin-bottom: 5%;
+}
+.Checkout hr{
+    color: #000;
+    border: 2px solid #000;
+    width: 90%;
+    margin-bottom: 5%;
+}
+.Checkout .btn{
+    height: 7vh;
+}

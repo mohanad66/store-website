@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
+import Navbar from '../navbar/Navbar';
+import Cart from '../Cart/Cart';
 import "./CardDetails.css"
-export default function CardDetails() {
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+export default function CardDetails({ addToCart }) {
     const { id } = useParams();
     const [product, setProduct] = useState(null)
     const [loading, setLoading] = useState(false)
@@ -41,10 +44,12 @@ export default function CardDetails() {
     if (!product) {
         return <div>Product not found</div>;
     }
-
+    const handleAddingToCart = () =>{
+        addToCart(product)
+    }
     return (
         <div className="Card-details">
-            <img src={product.thumbnail} alt={product.title} />
+            <LazyLoadImage src={product.thumbnail} alt={product.title} />
             <div>
                 <h3>{product.title}</h3>
                 <p>{product.description}</p>
@@ -52,7 +57,10 @@ export default function CardDetails() {
                     <p>Price: ${product.price}</p>
                     <p>Rating: {product.rating}</p>
                 </div>
-                <button className='btn'>Buy</button>
+                <div className="btns">
+                <button className='btn' >Buy</button>
+                <button  onClick={() => handleAddingToCart()} className='btn'>Add to Cart</button>
+                </div>
             </div>
         </div>
     );
