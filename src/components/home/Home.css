@@ -84,5 +84,8 @@
     .card{
         height: 50% !important;
     }
+    .sort select{
+        width: 50%;
+    }
     
 }
