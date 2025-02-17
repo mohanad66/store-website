@@ -1,6 +1,9 @@
+/* eslint-disable react/prop-types */
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import "./Card.css"
 import { Link } from 'react-router';
+// eslint-disable-next-line no-unused-vars
 import CardDetails from "../cardDetails/CardDetails.jsx"
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 export default function Card({ id, img, title, price, category, removeBtn = false, RuleofClicking = "" }) {
