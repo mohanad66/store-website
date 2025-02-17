@@ -112,6 +112,7 @@
         -o-border-radius: 20px;
     }
     .navbar .a.active small{
-        background-color: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff !important;
     }
 }
