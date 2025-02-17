@@ -1,20 +1,4 @@
-.Card-details img{
-    background-color: #fff;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 2%;
-    border: 5px solid transparent;
-    transition-duration: 500ms;
-}
-.Card-details img:hover{
-    border: 5px solid #04bbf3;
-    cursor: pointer;
-}
+
 .Card-details{
     display: grid;
     grid-template-columns: 6fr 6fr;
@@ -92,4 +76,42 @@
         margin-bottom: 5%;
     }
     
+}
+@media (hover:hover) {
+    .Card-details img{
+        background-color: #fff;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 2%;
+        border: 5px solid transparent;
+        transition-duration: 500ms;
+    }
+    .Card-details img:hover{
+        border: 5px solid #04bbf3;
+        cursor: pointer;
+    }
+}
+@media (hover:none) {
+    .Card-details img{
+        background-color: #fff;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 2%;
+        border: 5px solid transparent;
+        transition-duration: 500ms;
+    }
+    .Card-details img:active{
+        border: 5px solid #04bbf3;
+        cursor: pointer;
+    }
 }
