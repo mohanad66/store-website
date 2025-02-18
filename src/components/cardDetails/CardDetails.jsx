@@ -54,7 +54,7 @@ export default function CardDetails({ addToCart }) {
     }
     return (
         <div className="Card-details">
-            <LazyLoadImage src={product.thumbnail} alt={product.title} />
+            <LazyLoadImage effect='blur' src={product.thumbnail} alt={product.title} />
             <div>
                 <h3>{product.title}</h3>
                 <p>{product.description}</p>

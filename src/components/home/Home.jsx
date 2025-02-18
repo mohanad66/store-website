@@ -81,7 +81,6 @@ export default function Home() {
             setCardsData(originalCardsData); // Reset to original cards data
         }
     };
-
     return (
         <div className='home'>
             <div className="filters">
@@ -110,6 +109,7 @@ export default function Home() {
                         price={card.price}
                         category={card.category}
                         rating={card.rating}
+                        quantity={card.quantity}
                     />
                 ))}
             </div>

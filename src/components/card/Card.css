@@ -1,7 +1,9 @@
 * {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
+.img{
+    transition-delay: 1s
+}
 .card {
     width: 100%;
     display: flex;
@@ -18,7 +20,12 @@
     -o-border-radius: 20px;
     transition-duration: 500ms;
 }
-
+.quantity{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
 .card h3 {
     width: 100%;
     display: flex;
@@ -58,6 +65,12 @@
     min-width: 250px;
 }
 
+.card .btn{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .card .img:hover {
     cursor: pointer;
 }

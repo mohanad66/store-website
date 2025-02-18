@@ -1,3 +1,7 @@
+::root {
+  counter-reset: checked-sum, unchecked-sum;
+}
+
 body {
   background-image: linear-gradient(to left, yellow, rgb(175, 1, 175));
   padding: 0;

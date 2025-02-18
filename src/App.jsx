@@ -49,9 +49,16 @@ function App() {
     }
   };
 
-  const removeFromCart = (itemToRemove) => {
+  const removeFromCartAll = (itemToRemove) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== itemToRemove.id));
   };
+  const removeFromCartOne = (itemToRemove) => {
+      setCart((prevCart) => prevCart.map(item => 
+        item.id === itemToRemove.id 
+          ? { ...item, quantity: item.quantity - 1 } 
+          : item
+      ).filter(item => item.quantity > 0));
+    };
   return (
     <>
       {loading && (
@@ -62,15 +69,15 @@ function App() {
           </div>
         </div>
       )}
-        <Navbar count={cart.length} />
-        <Routes>
-          <Route path="/" element={<Home addToCart={addToCart} />} />
-          <Route
-            path="/cardDetails/:id"
-            element={<CardDetails addToCart={addToCart} />}
-          />
-          <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} />} />
-        </Routes>
+      <Navbar count={cart.reduce((total, item) => total + item.quantity, 0)} />
+      <Routes>
+        <Route path="/" element={<Home addToCart={addToCart} />} />
+        <Route
+          path="/cardDetails/:id"
+          element={<CardDetails addToCart={addToCart} />}
+        />
+        <Route path="/cart" element={<Cart cart={cart} removeFromCartOne={removeFromCartOne} removeFromCartAll={removeFromCartAll} />} />
+      </Routes>
     </>
   )
 }
