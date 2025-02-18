@@ -111,7 +111,14 @@
     }
 
 }
-
+@media (max-width:390px) {
+    .card .btn {
+        font-size: 13px !important;
+    }
+    .card{
+        margin-left: -2%;
+    }
+}
 @media (max-height:1400px) and (min-height:1050px) {
     .card {
         min-height: 40vh;
