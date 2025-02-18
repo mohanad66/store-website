@@ -1,0 +1,34 @@
+.stars {
+    display: flex !important;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    justify-content: center;
+}
+
+.star {
+    color: #ffc107; /* Gold color for stars */
+    font-size: 1rem;
+}
+
+.star.empty {
+    color: #e4e5e9; /* Light gray for empty stars */
+}
+
+.star.half {
+    position: relative;
+}
+
+.star.half::before {
+    content: '\f089'; /* Unicode for half-star in FontAwesome */
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+    color: #ffc107;
+}
+
+.error {
+    color: #ff0000;
+    font-weight: bold;
+}

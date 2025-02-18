@@ -109,6 +109,7 @@ export default function Home() {
                         title={card.title}
                         price={card.price}
                         category={card.category}
+                        rating={card.rating}
                     />
                 ))}
             </div>

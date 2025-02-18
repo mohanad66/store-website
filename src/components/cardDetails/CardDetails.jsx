@@ -1,9 +1,14 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
+// eslint-disable-next-line no-unused-vars
 import Navbar from '../navbar/Navbar';
+// eslint-disable-next-line no-unused-vars
 import Cart from '../Cart/Cart';
 import "./CardDetails.css"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import ProductRating from "../Rating-components/Stars.jsx"
+// eslint-disable-next-line react/prop-types
 export default function CardDetails({ addToCart }) {
     const { id } = useParams();
     const [product, setProduct] = useState(null)
@@ -55,7 +60,7 @@ export default function CardDetails({ addToCart }) {
                 <p>{product.description}</p>
                 <div className='Pricing'>
                     <p>Price: ${product.price}</p>
-                    <p>Rating: {product.rating}</p>
+                    <ProductRating rating={product.rating}/>
                 </div>
                 <div className="btns">
                 <button className='btn' >Buy</button>
