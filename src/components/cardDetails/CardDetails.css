@@ -48,6 +48,9 @@
     width: 100%;
     gap: 2%;
 }
+.btn{
+    min-height: 30px;
+}
 @media (max-width:1024px) {
     .Card-details img{
         width: 100%;
@@ -60,6 +63,9 @@
         width: 80%;
         margin-left: 10%;
         margin-right: 10%;
+    }
+    .btn{
+        font-size: 15px;
     }
     .Card-details{
         grid-template-columns: 1fr;

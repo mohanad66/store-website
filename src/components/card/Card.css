@@ -78,20 +78,24 @@
 .card .img:active {
     border: 5px solid #04a1d1;
 }
-
-
+.btns{
+    justify-content: center;
+    align-items: center;
+}
 @media (max-height:600px) {
     .card {
         min-height: 100vh;
     }
 }
 
-.card .btns-grid {
+.card .btns {
     display: grid !important;
     gap: 3% !important;
     grid-template-columns: 6fr 6fr;
     width: 90%;
     margin-left: 5%;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width:350px) {

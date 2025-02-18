@@ -39,9 +39,9 @@ const Cart = ({ cart, removeFromCartAll, removeFromCartOne }) => {
             {cart.length !== 0 ?
                 (<div className="Checkout">
                     <h2>Check out</h2>
-                    {cart.map(item => <h3 key={item.id}>{item.title} : {item.price}$ * {item.quantity} : {item.price * item.quantity}$</h3>)}
+                    {cart.map(item => <h3 key={item.id}>{item.title} : {item.price}$ * {item.quantity} : {Math.floor(item.price * item.quantity)}$</h3>)}
                     <hr />
-                    <h3>Total : {cart.reduce((total, item) => total + item.price * item.quantity, 0)}$</h3>
+                    <h3>Total : {cart.reduce((total, item) => Math.floor(total + item.price * item.quantity), 0)}$</h3>
                     <button className='btn' onClick={() => cart.forEach(item => handleRemoveAllItems(item))}>Check out</button>
                 </div>)
                 :
