@@ -139,3 +139,11 @@
     }
 }
 
+@media (max-height:350px) {
+    .card{
+        min-height: 120vh;
+    }
+    .card .img{
+        min-height: 60vh;
+    }
+}

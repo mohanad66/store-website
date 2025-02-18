@@ -22,6 +22,7 @@
     -ms-border-radius: 3rem;
     -o-border-radius: 3rem;
     transition-duration: 500ms;
+    margin-bottom: -3%;
 }
 
 @media(hover:hover)

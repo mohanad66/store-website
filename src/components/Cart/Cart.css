@@ -34,3 +34,55 @@
 .Checkout .btn{
     height: 7vh;
 }
+@media (max-width:900px) {
+    .Checkout{
+        width: 80%;
+    }
+}
+@media (max-width:600px) {
+    .Checkout{
+        width: 90%;
+        font-size: 12px;
+    }
+}
+@media (max-height:420px) {
+    .card .btns{
+        min-height: 20vh;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10%;
+    }
+    .card{
+        min-height:140vh !important;
+    }
+    .card .img{
+        min-height: 60vh;
+        margin-top: 15%;
+    }
+}
+@media (max-height:720px) {
+    .card .btns{
+        min-height: 20vh;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10%;
+    }
+    .card{
+        min-height:80vh !important;
+    }
+    .card .img{
+        min-height: 30vh;
+        margin-top: 15%;
+    }
+}
+@media (max-height:940px) {
+    .card .btns{
+        min-height: 20vh;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10%;
+    }
+    .card{
+        min-height:70vh ;
+    }
+}

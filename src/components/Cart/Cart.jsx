@@ -42,7 +42,7 @@ const Cart = ({ cart, removeFromCartAll, removeFromCartOne }) => {
                     {cart.map(item => <h3 key={item.id}>{item.title} : {item.price}$ * {item.quantity} : {item.price * item.quantity}$</h3>)}
                     <hr />
                     <h3>Total : {cart.reduce((total, item) => total + item.price * item.quantity, 0)}$</h3>
-                    <button className='btn' onClick={() => cart.forEach(item => handleRemove(item))}>Check out</button>
+                    <button className='btn' onClick={() => cart.forEach(item => handleRemoveAllItems(item))}>Check out</button>
                 </div>)
                 :
                 ""}
