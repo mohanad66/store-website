@@ -5,6 +5,12 @@
     align-items: center;
     width: 100%;
 }
+.card .img{
+    margin-top: 10% !important; 
+}
+.card h3{
+    margin-top: 0% !important;
+}
 .Checkout{
     background: #fff;
     color: #000;
@@ -23,7 +29,6 @@
     margin-left: 5%;
     display: flex;
     width: 100%;
-    margin-bottom: 5%;
 }
 .Checkout hr{
     color: #000;
@@ -57,7 +62,7 @@
     }
     .card .img{
         min-height: 60vh;
-        margin-top: 15%;
+        margin-top: 15% !important;
     }
 }
 @media (max-height:720px) {
