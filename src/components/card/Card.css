@@ -157,4 +157,10 @@
     .card .img{
         min-height: 60vh;
     }
+}@media (max-width:330px)
+{
+    .card .btn{
+        font-size: 12px !important;
+        width: 100%;
+    }
 }
