@@ -16,8 +16,8 @@ export default function Home() {
                     throw new Error('Network response was not ok');
                 }
                 const data = await response.json();
-                setCardsData(data.products);
-                setOriginalCardsData(data.products); // Set original cards data
+                setCardsData((data.products).sort(()=> .5 - Math.random()));
+                setOriginalCardsData((data.products).sort(()=> .5 - Math.random())); // Set original cards data
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
@@ -100,7 +100,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="cards-grid">
-                {(cardsData.sort(()=> .5 - Math.random())).map((card) => (
+                {(cardsData).map((card) => (
                     <Card
                         key={card.id}
                         id={card.id}
