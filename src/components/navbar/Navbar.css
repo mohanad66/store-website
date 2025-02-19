@@ -49,6 +49,7 @@
     }
     .navbar .a:hover{
         background: rgba(0, 0, 0, 0.3);
+        color: #fff;
     }
     .navbar .a small{
         font-family: 'Courier New', Courier, monospace;

@@ -100,7 +100,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="cards-grid">
-                {cardsData.map((card) => (
+                {(cardsData.sort(()=> .5 - Math.random())).map((card) => (
                     <Card
                         key={card.id}
                         id={card.id}

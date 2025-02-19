@@ -17,8 +17,8 @@ export default function Card({
   price,
   category,
   removeBtn = false,
-  RuleofClicking1 = () => {},
-  RuleofClicking = () => {},
+  RuleofClicking1 = () => { },
+  RuleofClicking = () => { },
 }) {
   const [itemCount, setItemCount] = useState(0);
   const divRef = useRef(null);
@@ -32,16 +32,16 @@ export default function Card({
 
   return (
     <div className="card" key={id}>
-      <LazyLoadImage
-        className="img"
-        width={280}
-        height={250}
-        effect="blur"
-        src={img || 'https://via.placeholder.com/150'} // Fallback image if img is undefined
-        alt={title}
-      />
+      <div className="img">
+        <LazyLoadImage
+          height={200}
+          effect="blur"
+          src={img || 'https://via.placeholder.com/150'} // Fallback image if img is undefined
+          alt={title}
+        />
+      </div>
       <h3>{title}</h3>
-      {removeBtn ? <p className="quantity">quantity: {quantity}</p> : ''}
+      {removeBtn ? <p className="quantity">Quantity: {quantity}</p> : ''}
       <div>
         <p>{price}$</p>
         <p>{category.charAt(0).toUpperCase() + category.slice(1)}</p>

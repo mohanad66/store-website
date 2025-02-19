@@ -84,7 +84,7 @@
         width: 95%;
     }
 }
-@media (max-width:730px) {
+@media (max-width:800px) {
     .cards-grid{
         grid-template-columns: 1fr;
         width: 90%;
@@ -104,9 +104,6 @@
     }
 }
 @media (max-height:1200px) {
-    .card{
-        height: 50% !important;
-    }
     .sort select{
         width: 50%;
         height: 25px;

@@ -10,6 +10,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import ProductRating from "../Rating-components/Stars.jsx"
 // eslint-disable-next-line react/prop-types
 export default function CardDetails({ addToCart }) {
+    const [quantity, setQuantity] = useState(0)
     const { id } = useParams();
     const [product, setProduct] = useState(null)
     const [loading, setLoading] = useState(false)
@@ -49,8 +50,15 @@ export default function CardDetails({ addToCart }) {
     if (!product) {
         return <div>Product not found</div>;
     }
-    const handleAddingToCart = () =>{
-        addToCart(product)
+
+    const handleAddingToCart = () => {
+        addToCart(product);
+    }
+    const handleManyaddTimes =() =>{
+        for(let i = 0; i < quantity; i++)
+        {
+            handleAddingToCart()
+        }
     }
     return (
         <div className="Card-details">
@@ -60,11 +68,15 @@ export default function CardDetails({ addToCart }) {
                 <p>{product.description}</p>
                 <div className='Pricing'>
                     <p>Price: ${product.price}</p>
-                    <ProductRating rating={product.rating}/>
+                    <ProductRating rating={product.rating} />
                 </div>
                 <div className="btns">
-                <button className='btn' >Buy</button>
-                <button  onClick={() => handleAddingToCart()} className='btn'>Add to Cart</button>
+                    <button className='btn btnd' >Buy</button>
+                    <div className="adding">
+                        <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value >99 ? 99 : e.target.value)} />
+                        <button onClick={() => handleManyaddTimes()} className='btn btnd'>Add to Cart</button>
+                    </div>
+
                 </div>
             </div>
         </div>
