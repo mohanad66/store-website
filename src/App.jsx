@@ -6,12 +6,10 @@ import CardDetails from './components/cardDetails/CardDetails.jsx'
 import { ClipLoader } from 'react-spinners';
 import Cart from './components/Cart/Cart.jsx'
 import Navbar from './components/navbar/Navbar.jsx';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const Home = React.lazy(() => import("./components/home/Home.jsx"))
-
-
-
-
-
+import { Link } from 'react-router'
+import { CiHome ,CiShoppingCart } from "react-icons/ci";
 
 function App() {
   const [cart, setCart] = useState(() => {
@@ -47,26 +45,20 @@ function App() {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
 
-  // Add a product to the cart
   const addToCart = (item) => {
     setCart((prevCart) => {
-      // البحث عن العنصر في السلة
       const existingItem = prevCart.find((cartItem) => cartItem.id === item.id);
-
       if (existingItem) {
-        // إذا كان العنصر موجودًا، قم بزيادة الكمية
         return prevCart.map((cartItem) =>
           cartItem.id === item.id
             ? { ...cartItem, quantity: cartItem.quantity + 1 }
             : cartItem
         );
       } else {
-        // إذا لم يكن العنصر موجودًا، أضفه إلى السلة مع كمية = 1
         return [...prevCart, { ...item, quantity: 1 }];
       }
     });
   };
-
   const removeFromCartAll = (itemToRemove) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== itemToRemove.id));
   };

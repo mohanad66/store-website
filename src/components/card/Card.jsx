@@ -28,15 +28,15 @@ export default function Card({
     if (divRef.current) {
       setItemCount(divRef.current.children.length);
     }
-  }, []); // Empty dependency array means this runs once after the initial render
-
+  }, []);
   return (
     <div className="card" key={id}>
       <div className="img">
         <LazyLoadImage
+        className='imag'
           height={200}
           effect="blur"
-          src={img || 'https://via.placeholder.com/150'} // Fallback image if img is undefined
+          src={img}
           alt={title}
         />
       </div>

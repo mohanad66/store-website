@@ -7,6 +7,7 @@ import Navbar from '../navbar/Navbar';
 import Cart from '../Cart/Cart';
 import "./CardDetails.css"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import "react-lazy-load-image-component/src/effects/blur.css"
 import ProductRating from "../Rating-components/Stars.jsx"
 // eslint-disable-next-line react/prop-types
 export default function CardDetails({ addToCart }) {
